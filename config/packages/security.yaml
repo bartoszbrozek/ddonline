@@ -28,3 +28,4 @@ security:
     - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/player, roles: IS_AUTHENTICATED_FULLY }
+    - { path: ^/character/list, roles: IS_AUTHENTICATED_FULLY }

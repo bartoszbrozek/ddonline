@@ -2,27 +2,28 @@
 
 namespace App\DataFixtures\ORM;
 
-use App\Entity\User;
+use App\Entity\Alignment;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class LoadUserData implements FixtureInterface, ContainerAwareInterface
+class LoadAlignmentData implements FixtureInterface, ContainerAwareInterface
 {
     private $container;
 
     public function load(ObjectManager $manager)
     {
-        $user = new User();
+        $alignment = new Alignment();
+        $alignment->setAlignment("Neutral");
 
-        $user->setUsername('admin');
-        $user->setEmail('admin@admin.comdupa');
-        $encoder = $this->container->get('security.password_encoder');
-        $password = $encoder->encodePassword($user, 'password');
-        $user->setPassword($password);
+        $manager->persist($alignment);
+        $manager->flush();
 
-        $manager->persist($user);
+        $alignment = new Alignment();
+        $alignment->setAlignment("Neutral Evil");
+
+        $manager->persist($alignment);
         $manager->flush();
     }
 

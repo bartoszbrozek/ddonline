@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -36,6 +37,25 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity="GameCharacter", mappedBy="user")
+     */
+    private $gameCharacters;
+
+    public function __construct()
+    {
+        $this->gameCharacters = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGameCharacters()
+    {
+        return $this->gameCharacters;
+    }
+
 
     public function getRoles()
     {
@@ -102,5 +122,12 @@ class User implements UserInterface
         $this->password = $password;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
 }

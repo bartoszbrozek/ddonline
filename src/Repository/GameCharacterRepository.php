@@ -19,10 +19,29 @@ class GameCharacterRepository extends ServiceEntityRepository
 
         try {
             return $this->createQueryBuilder('gc')
-                ->select('gc','r','a', 'cc')
+                ->select('gc', 'r', 'a', 'cc')
                 ->leftJoin('gc.race', 'r')
                 ->leftJoin('gc.alignment', 'a')
                 ->leftJoin('gc.className', 'cc')
+                ->getQuery()
+                ->getArrayResult();
+        } catch (NoResultException $ex) {
+            return null;
+        }
+    }
+
+    public function getUserGameCharactersById($id)
+    {
+
+        try {
+            return $this->createQueryBuilder('gc')
+                ->select('gc', 'r', 'a', 'cc')
+                ->leftJoin('gc.race', 'r')
+                ->leftJoin('gc.alignment', 'a')
+                ->leftJoin('gc.className', 'cc')
+                ->leftJoin('gc.user', 'u')
+                ->where('gc.user = :id')
+                ->setParameter('id', $id)
                 ->getQuery()
                 ->getArrayResult();
         } catch (NoResultException $ex) {

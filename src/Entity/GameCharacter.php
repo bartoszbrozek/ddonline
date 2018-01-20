@@ -55,6 +55,28 @@ class GameCharacter
     private $experience;
 
     /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="gameCharacters")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $user;
+
+    /**
+     * @return mixed
+     */
+    public function getUser() : User
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
      * @return mixed
      */
     public function getId()

@@ -4,17 +4,19 @@ namespace App\Controller;
 
 use App\Entity\CharacterClass;
 use App\Entity\GameCharacter;
+use App\Entity\User;
 use App\Form\CharacterType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class CharacterController extends Controller
 {
 
-    public function createAction(Request $request)
+    public function createAction(Request $request, UserInterface $userInterface)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -25,6 +27,10 @@ class CharacterController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $user = $this->getDoctrine()->getRepository(User::class)->getSingleUserById($userInterface->getId());
+            $character->setUser($user);
+
             $em->persist($character);
             $em->flush();
 
@@ -37,9 +43,9 @@ class CharacterController extends Controller
         ]);
     }
 
-    public function listAction(Request $request)
+    public function listAction(Request $request, UserInterface $userInterface)
     {
-        $characters = $this->getDoctrine()->getRepository(GameCharacter::class)->getAll();
+        $characters = $this->getDoctrine()->getRepository(GameCharacter::class)->getUserGameCharactersById($userInterface->getId());
 
 //        dump($characters);
 
