@@ -1,0 +1,19 @@
+index:
+    path: /
+    controller: App\Controller\MainController::indexAction
+
+login:
+    path: /login
+    controller: App\Controller\LoginController::loginAction
+
+logout:
+    path: /logout
+    controller: App\Controller\LoginController::logoutAction
+
+character/create:
+    path: /character/create
+    controller: App\Controller\CharacterController::createAction
+
+character/list:
+    path: /character/list
+    controller: App\Controller\CharacterController::listAction
