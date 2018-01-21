@@ -14,6 +14,14 @@ character/create:
     path: /character/create
     controller: App\Controller\CharacterController::createAction
 
+character/edit:
+    path: /character/edit/{id}
+    controller: App\Controller\CharacterController::editAction
+
+character/remove:
+    path: /character/remove/{id}
+    controller: App\Controller\CharacterController::removeAction
+
 character/list:
     path: /character/list
     controller: App\Controller\CharacterController::listAction

@@ -18,24 +18,21 @@ class CharacterController extends Controller
 
     public function createAction(Request $request, UserInterface $userInterface)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $character = new GameCharacter();
-
-        $form = $this->createForm(CharacterType::class, $character);
-
+        $gameCharacter = new GameCharacter();
+        $form = $this->createForm(CharacterType::class, $gameCharacter);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
             $user = $this->getDoctrine()->getRepository(User::class)->getSingleUserById($userInterface->getId());
-            $character->setUser($user);
+            $gameCharacter->setUser($user);
 
-            $em->persist($character);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($gameCharacter);
             $em->flush();
 
             $this->addFlash('success', "You have created a new character.");
-            return $this->redirect('/');
+            return $this->redirect('/character/list');
         }
 
         return $this->render('character/create.html.twig', [
@@ -47,10 +44,41 @@ class CharacterController extends Controller
     {
         $characters = $this->getDoctrine()->getRepository(GameCharacter::class)->getUserGameCharactersById($userInterface->getId());
 
-//        dump($characters);
-
         return $this->render('character/list.html.twig', [
             'characters' => $characters
         ]);
+    }
+
+    public function editAction(Request $request, GameCharacter $gameCharacter)
+    {
+        $form = $this->createForm(CharacterType::class, $gameCharacter);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash('success', 'Character edited successfully.');
+
+            return $this->redirectToRoute('character/list');
+        }
+
+        return $this->render('character/edit.html.twig', [
+            'gameCharacter' => $gameCharacter,
+            'form' => $form->createView()
+        ]);
+    }
+
+    public function removeAction(Request $request, GameCharacter $gameCharacter)
+    {
+        $form = $this->createForm(CharacterType::class, $gameCharacter);
+        $form->handleRequest($request);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($gameCharacter);
+        $em->flush();
+
+        $this->addFlash('success', 'Character removed successfully.');
+
+        return $this->redirectToRoute('character/list');
     }
 }
