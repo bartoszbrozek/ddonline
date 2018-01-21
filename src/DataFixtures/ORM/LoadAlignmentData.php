@@ -14,17 +14,21 @@ class LoadAlignmentData implements FixtureInterface, ContainerAwareInterface
 
     public function load(ObjectManager $manager)
     {
-        $alignment = new Alignment();
-        $alignment->setAlignment("Neutral");
+        $alignments = ['Lawful', 'Neutral', 'Chaotic'];
 
-        $manager->persist($alignment);
-        $manager->flush();
+        $types = ['Good', 'Neutral', 'Evil'];
 
-        $alignment = new Alignment();
-        $alignment->setAlignment("Neutral Evil");
+        foreach ($alignments as $alignment) {
+            $alg = $alignment;
+            foreach ($types as $type) {
+                $alignment = new Alignment();
+                $alignment->setAlignment((string)$alg . " " . (string)$type);
 
-        $manager->persist($alignment);
-        $manager->flush();
+                $manager->persist($alignment);
+                $manager->flush();
+            }
+        }
+
     }
 
     public function setContainer(ContainerInterface $container = null)

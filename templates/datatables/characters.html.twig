@@ -1,9 +1,4 @@
 <div class="box">
-    <div class="box-header">
-        <h3 class="box-title">Your Characters</h3>
-    </div>
-
-    <!-- /.box-header -->
     <div class="box-body">
         <table id="users" class="table table-bordered table-striped">
             <thead>
@@ -23,10 +18,10 @@
                     <td>{{ character.name }}</td>
                     <td>{{ character.level }}</td>
                     <td>{{ character.race.race }}</td>
-                    <td>{{ character.alignment.alignment }}</td>
                     <td>{{ character.className.className }}</td>
+                    <td>{{ character.alignment.alignment }}</td>
                     <td>
-                        <a href="" class="btn btn-info">Show</a>
+                        <a href="{{ path("character", {'id': character.id}) }}" class="btn btn-info">Show</a>
                         <a href="{{ path("character/edit", {'id': character.id}) }}" class="btn btn-default">Edit</a>
                         <a href="#" class="btn btn-danger askRemoveCharacter" data-toggle="modal"
                            data-target="#askRemoveCharacter"

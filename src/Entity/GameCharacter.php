@@ -50,6 +50,13 @@ class GameCharacter
     private $alignment;
 
     /**
+     * Many Characters has One Gender.
+     * @ORM\ManyToOne(targetEntity="Gender")
+     * @ORM\JoinColumn(name="gender_id", referencedColumnName="id")
+     */
+    private $gender;
+
+    /**
      * @ORM\Column(type="integer")
      */
     private $experience;
@@ -61,9 +68,70 @@ class GameCharacter
     private $user;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $strength;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $dexterity;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $constitution;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $intelligence;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $wisdom;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $charisma;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $hitPoints;
+
+
+    /**
+     * Many GameCharacters have Many Speeches.
+     * @ORM\ManyToMany(targetEntity="Speech")
+     * @ORM\JoinTable(name="gameCharacters_speeches",
+     *      joinColumns={@ORM\JoinColumn(name="game_character_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="speech_id", referencedColumnName="id")}
+     *      )
+     */
+
+    private $speeches;
+
+
+    public function __construct()
+    {
+        $this->speeches = new ArrayCollection();
+    }
+
+    /**
      * @return mixed
      */
-    public function getUser() : User
+    public function getSpeeches()
+    {
+        return $this->speeches;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser(): User
     {
         return $this->user;
     }
@@ -187,6 +255,135 @@ class GameCharacter
     {
         $this->experience = $experience;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param mixed $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStrength()
+    {
+        return $this->strength;
+    }
+
+    /**
+     * @param mixed $strength
+     */
+    public function setStrength($strength)
+    {
+        $this->strength = $strength;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDexterity()
+    {
+        return $this->dexterity;
+    }
+
+    /**
+     * @param mixed $dexterity
+     */
+    public function setDexterity($dexterity)
+    {
+        $this->dexterity = $dexterity;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getConstitution()
+    {
+        return $this->constitution;
+    }
+
+    /**
+     * @param mixed $constitution
+     */
+    public function setConstitution($constitution)
+    {
+        $this->constitution = $constitution;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIntelligence()
+    {
+        return $this->intelligence;
+    }
+
+    /**
+     * @param mixed $intelligence
+     */
+    public function setIntelligence($intelligence)
+    {
+        $this->intelligence = $intelligence;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWisdom()
+    {
+        return $this->wisdom;
+    }
+
+    /**
+     * @param mixed $wisdom
+     */
+    public function setWisdom($wisdom)
+    {
+        $this->wisdom = $wisdom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCharisma()
+    {
+        return $this->charisma;
+    }
+
+    /**
+     * @param mixed $charisma
+     */
+    public function setCharisma($charisma)
+    {
+        $this->charisma = $charisma;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHitPoints()
+    {
+        return $this->hitPoints;
+    }
+
+    /**
+     * @param mixed $hitPoints
+     */
+    public function setHitPoints($hitPoints)
+    {
+        $this->hitPoints = $hitPoints;
+    }
+
 
 
 }

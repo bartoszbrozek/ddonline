@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block pageTitle %}
-    Edit character
+    Your character
 {% endblock %}
 
 {% block body %}
-    {{ form(form) }}
+    {% include 'character/sheet/characterSheet.html.twig' %}
 {% endblock %}
 

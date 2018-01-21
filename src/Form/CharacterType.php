@@ -5,7 +5,9 @@ namespace App\Form;
 use App\Entity\Alignment;
 use App\Entity\GameCharacter;
 use App\Entity\CharacterClass;
+use App\Entity\Gender;
 use App\Entity\Race;
+use App\Entity\Speech;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -28,6 +30,10 @@ class CharacterType extends AbstractType
             ->add('experience', IntegerType::class, [
                 'required' => true
             ])
+            ->add('gender', EntityType::class, [
+                'class' => Gender::class,
+                'choice_label' => 'Gender'
+            ])
             ->add('className', EntityType::class, [
                 'class' => CharacterClass::class,
                 'choice_label' => 'Class Name'
@@ -39,6 +45,33 @@ class CharacterType extends AbstractType
             ->add('alignment', EntityType::class, [
                 'class' => Alignment::class,
                 'choice_label' => 'alignment'
+            ])
+            ->add('speeches', null, [
+                'required' => true,
+                'multiple' => true,
+                'expanded' => true,
+                'class' => 'App:Speech'
+            ])
+            ->add('hitPoints', IntegerType::class, [
+                'required' => true
+            ])
+            ->add('strength', IntegerType::class, [
+                'required' => true
+            ])
+            ->add('dexterity', IntegerType::class, [
+                'required' => true
+            ])
+            ->add('constitution', IntegerType::class, [
+                'required' => true
+            ])
+            ->add('intelligence', IntegerType::class, [
+                'required' => true
+            ])
+            ->add('wisdom', IntegerType::class, [
+                'required' => true
+            ])
+            ->add('charisma', IntegerType::class, [
+                'required' => true
             ])
             ->add('submit', SubmitType::class, [
                 'attr' => [

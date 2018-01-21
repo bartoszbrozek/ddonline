@@ -65,6 +65,10 @@
             {% endfor %}
         {% endfor %}
 
+        <div class="box-header">
+            <h3 class="box-title">{% block pageTitle %}{% endblock %}</h3>
+        </div>
+
         {% block body %}{% endblock %}
     </div>
 

@@ -25,3 +25,7 @@ character/remove:
 character/list:
     path: /character/list
     controller: App\Controller\CharacterController::listAction
+
+character:
+    path: /character/{id}
+    controller: App\Controller\CharacterController::showAction

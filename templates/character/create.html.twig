@@ -1,7 +1,61 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block pageTitle %}
     Create a new character
-    {{ form(form) }}
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Base</a></li>
+        <li><a data-toggle="tab" href="#abilities">Abilities</a></li>
+        <li><a data-toggle="tab" href="#class">Class</a></li>
+        <li><a data-toggle="tab" href="#skills">Skills</a></li>
+        <li><a data-toggle="tab" href="#feats">Feats</a></li>
+        <li><a data-toggle="tab" href="#speech">Speech</a></li>
+        <li><a data-toggle="tab" href="#menu2">Shop</a></li>
+        <li><a data-toggle="tab" href="#menu2">Equip</a></li>
+        <li><a data-toggle="tab" href="#menu2">Magic</a></li>
+        <li><a data-toggle="tab" href="#menu2">Spells</a></li>
+        <li><a data-toggle="tab" href="#menu2">Character Info</a></li>
+        <li><a data-toggle="tab" href="#menu2">History</a></li>
+        <li><a data-toggle="tab" href="#menu2">Goals</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            {{ form_row(form.name) }}
+            {{ form_row(form.level) }}
+            {{ form_row(form.experience) }}
+            {{ form_row(form.hitPoints) }}
+            {{ form_row(form.gender) }}
+            {{ form_row(form.className) }}
+            {{ form_row(form.race) }}
+            {{ form_row(form.alignment) }}
+        </div>
+        <div id="abilities" class="tab-pane fade">
+            {{ form_row(form.strength) }}
+            {{ form_row(form.dexterity) }}
+            {{ form_row(form.constitution) }}
+            {{ form_row(form.intelligence) }}
+            {{ form_row(form.wisdom) }}
+            {{ form_row(form.charisma) }}
+        </div>
+        <div id="class" class="tab-pane fade">
+        </div>
+        <div id="skills" class="tab-pane fade">
+        </div>
+        <div id="feats" class="tab-pane fade">
+        </div>
+        <div id="speech" class="tab-pane fade">
+            {{ form_row(form.speeches) }}
+        </div>
+    </div>
+
+    <div>
+        {{ form_row(form.submit) }}
+    </div>
+
+    {{ form_end(form) }}
 {% endblock %}
 

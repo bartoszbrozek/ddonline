@@ -1,0 +1,1376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0088)file:///D:/Program%20Files%20(x86)/Redblade%203.5e/charactersheets/Barti%20Pogromca.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Barti Pogromca character sheet, Redblade 3.5e</title>
+    <link rel="stylesheet" href="{{ asset('css/character/sheet/characterSheet.css') }}">
+
+</head>
+
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="firstpage">
+    <!--DWLayoutTable-->
+    <tbody>
+    <tr>
+        <td height="18" colspan="10">{{ character.name }}</td>
+        <td colspan="12" valign="top">{{ character.user.username }}</td>
+        <td colspan="8" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    </tr>
+    <tr>
+        <td height="16" colspan="10" valign="top" class="desc1">CHARACTER NAME</td>
+        <td colspan="12" valign="top" class="desc1">PLAYER</td>
+        <td colspan="8" class="desc1">CAMPAIGN</td>
+    </tr>
+    <tr>
+        <td height="18" colspan="10"> {{ character.level }} {{ character.className.className }}</td>
+        <td colspan="7" valign="top">{{ character.race.race }}</td>
+        <td colspan="5" valign="top">{{ character.alignment.alignment }}</td>
+        <td colspan="8" valign="top" class="boxed">{{ character.experience }}</td>
+    </tr>
+    <tr>
+        <td height="16" colspan="10" valign="top" class="desc1">CLASS AND LEVEL</td>
+        <td colspan="7" valign="top" class="desc1">RACE</td>
+        <td colspan="5" valign="top" class="desc1">ALIGNMENT</td>
+        <td colspan="8" class="desc1">EXPERIENCE POINTS</td>
+    </tr>
+    <tr>
+        <td height="18" colspan="30" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="42" height="18" valign="middle" class="desc2"><p>ABILITY NAME</p></td>
+        <td colspan="2" class="desc2">ABILITY SCORE</td>
+        <td colspan="3" class="desc2">ABILITY MODIFIER</td>
+        <td colspan="2" class="desc2"><!--DWLayoutEmptyCell-->&nbsp;</td>
+        <td colspan="3" class="desc2">TOTAL</td>
+        <td colspan="11" class="desc2">WOUNDS/CURRENT HP</td>
+        <td colspan="5" class="desc2">NONLETHAL DAMAGE</td>
+        <td colspan="3" class="desc2">SPEED</td>
+    </tr>
+    <tr>
+        <td height="39" valign="middle" class="blackback"><p>STR<br>
+                <span class="blackback_small">strength</span></p></td>
+        <td colspan="2" valign="middle" class="boxed">32</td>
+        <td colspan="3" valign="middle" class="boxed">+11</td>
+        <td colspan="2" valign="top" class="blackback"><p>HP<br>
+                <span class="blackback_small">hit points</span></p></td>
+        <td colspan="3" valign="top" class="boxed">90</td>
+        <td colspan="11" valign="top" class="boxed"><!--DWLayoutEmptyCell-->&nbsp;</td>
+        <td colspan="5" valign="top" class="boxed"><!--DWLayoutEmptyCell-->&nbsp;</td>
+        <td colspan="3" valign="top" class="boxed">40ft.</td>
+    </tr>
+    <tr>
+        <td height="39" valign="middle" class="blackback"><p>DEX<br>
+                <span class="blackback_small">dexterity</span></p></td>
+        <td colspan="2" valign="middle" class="boxed">16</td>
+        <td colspan="3" valign="middle" class="boxed">+3</td>
+        <td colspan="2" valign="top" class="blackback"><p>AC<br>
+                <span class="blackback_small">armor class</span></p></td>
+        <td colspan="3" valign="top" class="boxed">13</td>
+        <td width="10" class="desc3">=</td>
+        <td colspan="2" valign="top" class="boxed">10</td>
+        <td width="8" class="desc3">+</td>
+        <td width="39" valign="top" class="boxed">0</td>
+        <td width="9" class="desc3">+</td>
+        <td width="39" valign="top" class="boxed">0</td>
+        <td width="7" class="desc3">+</td>
+        <td width="43" valign="top" class="boxed">3</td>
+        <td width="7" valign="top" class="desc3">+</td>
+        <td colspan="2" valign="top" class="boxed">0</td>
+        <td width="7" class="desc3">+</td>
+        <td width="43" valign="top" class="boxed">0</td>
+        <td width="7" class="desc3">+</td>
+        <td colspan="2" valign="top" class="boxed">0</td>
+        <td width="7" class="desc3">+</td>
+        <td width="43" valign="top" class="boxed">0</td>
+    </tr>
+    <tr>
+        <td rowspan="2" valign="middle" class="blackback"><p>CON<br>
+                <span class="blackback_small">constitution</span></p></td>
+        <td colspan="2" rowspan="2" valign="middle" class="boxed">12</td>
+        <td colspan="3" rowspan="2" valign="middle" class="boxed">+1</td>
+        <td width="31" height="18"></td>
+        <td width="8"></td>
+        <td colspan="3" rowspan="2" valign="top" class="desc4">TOTAL</td>
+        <td></td>
+        <td colspan="2" rowspan="2" class="desc4">BASE</td>
+        <td></td>
+        <td rowspan="2" class="desc4">ARMOR BONUS</td>
+        <td></td>
+        <td rowspan="2" class="desc4">SHIELD BONUS</td>
+        <td></td>
+        <td valign="top" class="desc4">DEX MODIFIER</td>
+        <td></td>
+        <td colspan="2" valign="top" class="desc4">SIZE MODIFIER</td>
+        <td></td>
+        <td valign="top" class="desc4">NATURAL ARMOR</td>
+        <td></td>
+        <td colspan="2" valign="top" class="desc4">DEFLECT MODIFIER</td>
+        <td></td>
+        <td valign="top" class="desc4">MISC MODIFIER</td>
+    </tr>
+    <tr>
+        <td height="21"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="7" valign="top" class="blackback">DAMAGE REDUCTION</td>
+        <td colspan="4" valign="top" class="boxed">2/--</td>
+    </tr>
+    <tr>
+        <td height="42" valign="middle" class="blackback"><p>INT<br>
+                <span class="blackback_small">intelligence</span></p></td>
+        <td colspan="2" valign="middle" class="boxed">4</td>
+        <td colspan="3" valign="middle" class="boxed">-3</td>
+        <td colspan="3" valign="top" class="blackback"><p>TOUCH<br>
+                <span class="blackback_small">armor class</span></p></td>
+        <td colspan="3" valign="top" class="boxed">13</td>
+        <td colspan="5" valign="top" class="blackback"><p>FLAT-FOOTED<br>
+                <span class="blackback_small">armor class</span></p></td>
+        <td valign="top" class="boxed">10</td>
+        <td></td>
+        <td colspan="11" rowspan="20" valign="top">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tbody>
+                <tr class="blackback">
+                    <td height="18" colspan="10" valign="top">SKILLS</td>
+                </tr>
+                <tr>
+                    <td width="9" height="18" valign="top" class="blackback"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td width="74" valign="top" class="descboxed">SKILL NAME</td>
+                    <td width="25" valign="top" class="descboxed">KEY ABILITY</td>
+                    <td colspan="2" valign="top" class="descboxed">SKILL MODIFIER</td>
+                    <td colspan="2" valign="top" class="descboxed">ABILITY MODIFIER</td>
+                    <td width="25" valign="top" class="descboxed">RANKS</td>
+                    <td colspan="2" valign="top" class="descboxed">MISC MODIFIER</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Appraise¤§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td width="25" valign="top" class="skill2"> -3</td>
+                    <td width="7" class="desc3">=</td>
+                    <td width="25" valign="top" class="skill"> -3</td>
+                    <td width="7" class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td width="7" class="desc3">+</td>
+                    <td width="25" valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Balance¤</td>
+                    <td valign="top" class="skillability">dex</td>
+                    <td valign="top" class="skill2"> 3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> 3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Bluff¤§</td>
+                    <td valign="top" class="skillability">cha</td>
+                    <td valign="top" class="skill2"> -4</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -4</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">Climb¤</td>
+                    <td valign="top" class="skillability">str</td>
+                    <td valign="top" class="skill2"> 11</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> 11</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Concentration¤§</td>
+                    <td valign="top" class="skillability">con</td>
+                    <td valign="top" class="skill2"> 1</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> 1</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">Craft¤§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Decipher Script§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Diplomacy¤§</td>
+                    <td valign="top" class="skillability">cha</td>
+                    <td valign="top" class="skill2"> -4</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -4</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Disable Device§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Disguise¤§</td>
+                    <td valign="top" class="skillability">cha</td>
+                    <td valign="top" class="skill2"> -4</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -4</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Escape Artist¤</td>
+                    <td valign="top" class="skillability">dex</td>
+                    <td valign="top" class="skill2"> 3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> 3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Forgery¤§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Gather Information¤§</td>
+                    <td valign="top" class="skillability">cha</td>
+                    <td valign="top" class="skill2"> -4</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -4</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">Handle Animal§</td>
+                    <td valign="top" class="skillability">cha</td>
+                    <td valign="top" class="skill2"> -4</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -4</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Heal¤§</td>
+                    <td valign="top" class="skillability">wis</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Hide¤</td>
+                    <td valign="top" class="skillability">dex</td>
+                    <td valign="top" class="skill2"> 3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> 3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">Intimidate¤§</td>
+                    <td valign="top" class="skillability">cha</td>
+                    <td valign="top" class="skill2"> -4</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -4</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">Jump¤</td>
+                    <td valign="top" class="skillability">str</td>
+                    <td valign="top" class="skill2"> 19</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> 11</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 8</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (arcana)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (architecture &amp; engineering)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (dungeoneering)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (geography)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (history)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (local)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (nature)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (nobility and royalty)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (religion)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                    <td valign="top" class="skillname">(cc)Knowledge (the planes)§</td>
+                    <td valign="top" class="skillability">int</td>
+                    <td valign="top" class="skill2"> -3</td>
+                    <td class="desc3">=</td>
+                    <td valign="top" class="skill"> -3</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                    <td class="desc3">+</td>
+                    <td valign="top" class="skill"> 0</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="42" valign="middle" class="blackback"><p>WIS<br>
+                <span class="blackback_small">wisdom</span></p></td>
+        <td colspan="2" valign="middle" class="boxed">5</td>
+        <td colspan="3" valign="middle" class="boxed">-3</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td width="10">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td width="13"></td>
+        <td></td>
+        <td colspan="2" valign="top" class="desc2">TOTAL</td>
+        <td></td>
+        <td valign="top" class="desc2">DEX MODIFIER</td>
+        <td></td>
+        <td valign="top" class="desc2">MISC MODIFIER</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="42" valign="middle" class="blackback"><p>CHA<br>
+                <span class="blackback_small">charisma</span></p></td>
+        <td colspan="2" valign="middle" class="boxed">2</td>
+        <td colspan="3" valign="middle" class="boxed">-4</td>
+        <td colspan="6" valign="top" class="blackback"><p>INITIATIVE<br>
+                <span class="blackback_small">modifier</span></p></td>
+        <td colspan="2" valign="top" class="boxed">+7</td>
+        <td valign="top" class="desc3">=</td>
+        <td valign="top" class="boxed">3</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed">4</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="42" colspan="2" valign="top" class="desc2">SAVING THROWS</td>
+        <td colspan="2" valign="top" class="desc2">TOTAL</td>
+        <td width="9">&nbsp;</td>
+        <td colspan="2" valign="top" class="desc2">BASE SAVE</td>
+        <td>&nbsp;</td>
+        <td colspan="3" valign="top" class="desc2">ABILITY MODIFIER</td>
+        <td>&nbsp;</td>
+        <td colspan="2" valign="top" class="desc2">MAGIC MODIFIER</td>
+        <td>&nbsp;</td>
+        <td valign="top" class="desc2">MISC MODIFIER</td>
+        <td>&nbsp;</td>
+        <td valign="top" class="desc2">TEMP. MODIFIER</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="42" colspan="2" valign="top" class="blackback"><p>FORT<br>
+                <span class="blackback_small">constitution</span></p></td>
+        <td colspan="2" valign="top" class="boxed">9</td>
+        <td valign="top" class="desc3">=</td>
+        <td colspan="2" valign="top" class="boxed">8</td>
+        <td valign="top" class="desc3">+</td>
+        <td colspan="3" valign="top" class="boxed">1</td>
+        <td valign="top" class="desc3">+</td>
+        <td colspan="2" valign="top" class="boxed">0</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed">0</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="42" colspan="2" valign="top" class="blackback"><p>REFLEX<br>
+                <span class="blackback_small">dexterity</span></p></td>
+        <td colspan="2" valign="top" class="boxed">7</td>
+        <td valign="top" class="desc3">=</td>
+        <td colspan="2" valign="top" class="boxed">4</td>
+        <td valign="top" class="desc3">+</td>
+        <td colspan="3" valign="top" class="boxed">3</td>
+        <td valign="top" class="desc3">+</td>
+        <td colspan="2" valign="top" class="boxed">0</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed">0</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="42" colspan="2" valign="top" class="blackback"><p>WILL<br>
+                <span class="blackback_small">wisdom</span></p></td>
+        <td colspan="2" valign="top" class="boxed">1</td>
+        <td valign="top" class="desc3">=</td>
+        <td colspan="2" valign="top" class="boxed">4</td>
+        <td valign="top" class="desc3">+</td>
+        <td colspan="3" valign="top" class="boxed">-3</td>
+        <td valign="top" class="desc3">+</td>
+        <td colspan="2" valign="top" class="boxed">0</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed">0</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19"></td>
+        <td width="22"></td>
+        <td width="17"></td>
+        <td width="22"></td>
+        <td></td>
+        <td width="8"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td width="26"></td>
+        <td width="13"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="28" colspan="5" valign="top" class="blackback">BASE ATTACK BONUS</td>
+        <td colspan="7" valign="top" class="boxed">12/7/2</td>
+        <td colspan="5" valign="top" class="blackback">SPELL RESISTANCE</td>
+        <td valign="top" class="boxed">0</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="13"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="28" colspan="5" valign="top" class="blackback"><p>GRAPPLE<br>
+                <span class="blackback_small"> modifier</span></p></td>
+        <td colspan="2" valign="top" class="boxed">23</td>
+        <td valign="top" class="desc3">=</td>
+        <td colspan="3" valign="top" class="boxed">12</td>
+        <td valign="top" class="desc3">+</td>
+        <td colspan="2" valign="top" class="boxed">11</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed">0</td>
+        <td valign="top" class="desc3">+</td>
+        <td valign="top" class="boxed">0</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="18"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" valign="top" class="desc4">TOTAL</td>
+        <td></td>
+        <td colspan="3" valign="top" class="desc4">BASE ATT BONUS</td>
+        <td></td>
+        <td colspan="2" valign="top" class="desc4">STRENGTH MODIFIER</td>
+        <td></td>
+        <td valign="top" class="desc4">SIZE MODIFIER</td>
+        <td></td>
+        <td valign="top" class="desc4">MISC MODIFIER</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19" colspan="9" valign="top" class="blackback2">ATTACK</td>
+        <td colspan="4" valign="top" class="blackback2">ATTACK</td>
+        <td colspan="3" valign="top" class="blackback2">DAMAGE</td>
+        <td colspan="2" valign="top" class="blackback2">CRITICAL</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19" colspan="9" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="4" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="3" valign="to" class="boxed" p="">&nbsp;</td>
+        <td colspan="2" valign="top" class="boxed">&nbsp;</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19" colspan="2" valign="top" class="blackback2">RANGE</td>
+        <td colspan="3" valign="top" class="blackback2">TYPE</td>
+        <td colspan="13" valign="top" class="blackback2">NOTES</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19" colspan="2" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="3" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="13" valign="top" class="boxed">&nbsp;</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="9"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19" colspan="9" valign="top" class="blackback2">ATTACK</td>
+        <td colspan="4" valign="top" class="blackback2">ATTACK</td>
+        <td colspan="3" valign="top" class="blackback2">DAMAGE</td>
+        <td colspan="2" valign="top" class="blackback2">CRITICAL</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19" colspan="9" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="4" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="3" valign="to" class="boxed" p="">&nbsp;</td>
+        <td colspan="2" valign="top" class="boxed">&nbsp;</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="2" rowspan="2" valign="top" class="blackback2">RANGE</td>
+        <td colspan="3" rowspan="2" valign="top" class="blackback2">TYPE</td>
+        <td colspan="13" rowspan="2" valign="top" class="blackback2">NOTES</td>
+        <td height="18"></td>
+    </tr>
+    <tr>
+        <td height="1"></td>
+        <td></td>
+        <td></td>
+        <td width="24"></td>
+        <td width="19"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td width="8"></td>
+        <td width="35"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td height="19" colspan="2" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="3" valign="top" class="boxed">&nbsp;</td>
+        <td colspan="13" valign="top" class="boxed">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td colspan="11" rowspan="2" valign="top">(cc) crossclass skill <br>
+            ¤ can be used untrained § apply armor penalty
+        </td>
+    </tr>
+    <tr>
+        <td height="19">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<table width="580" border="0" cellpadding="0" cellspacing="0" class="page">
+    <!--DWLayoutTable-->
+    <tbody>
+    <tr>
+        <td width="580" height="438" valign="top">
+            <table width="580" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tbody>
+                <tr>
+                    <td width="342" height="24" valign="top" class="blackback">POSSESSIONS</td>
+                    <td width="12">&nbsp;</td>
+                    <td width="226" valign="top" class="blackback">SKILLS</td>
+                </tr>
+                <tr>
+                    <td height="414" valign="top">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <!--DWLayoutTable-->
+                            <tbody>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="descboxed">ITEM</td>
+                                <td width="32" valign="top" class="descboxed">PG.</td>
+                                <td width="32" valign="top" class="descboxed">LB.</td>
+                                <td width="107" valign="top" class="descboxed">ITEM</td>
+                                <td width="32" valign="top" class="descboxed">PG.</td>
+                                <td width="32" valign="top" class="descboxed">LB.</td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall">2 x Axe, orc double +1</td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall">30</td>
+                                <td width="107" valign="top" class="boxedsmall">Climber's kit</td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall">5</td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall">Full-plate</td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall">50</td>
+                                <td width="107" valign="top" class="boxedsmall">10 x Rations, trail (per day)</td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall">10</td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall">3 x Rations, trail (per
+                                    day)
+                                </td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall">3</td>
+                                <td width="107" valign="top" class="boxedsmall">Silver Greataxe +1</td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall">12</td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            <tr>
+                                <td width="107" height="24" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                                <td width="107" valign="top" class="boxedsmall"></td>
+                                <td width="32" valign="top" class="boxedsmall"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="32" valign="top" class="boxedsmall"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td valign="top">
+                        <table width="226" border="0" cellpadding="0" cellspacing="0">
+                            <!--DWLayoutTable-->
+                            <!--DWLayoutTable-->
+                            <tbody>
+                            <tr>
+                                <td width="3" height="18" valign="top" class="blackback">
+                                    <!--DWLayoutEmptyCell-->&nbsp;
+                                </td>
+                                <td width="59" valign="top" class="descboxed">SKILL NAME</td>
+                                <td width="27" valign="top" class="descboxed">KEY ABILITY</td>
+                                <td colspan="2" valign="top" class="descboxed">SKILL MODIFIER</td>
+                                <td colspan="2" valign="top" class="descboxed">ABILITY MODIFIER</td>
+                                <td width="26" valign="top" class="descboxed">RANKS</td>
+                                <td colspan="2" valign="top" class="descboxed">MISC MODIFIER</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">Listen¤§</td>
+                                <td width="27" valign="top" class="skillability">wis</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Move Silently¤</td>
+                                <td width="27" valign="top" class="skillability">dex</td>
+                                <td width="27" valign="top" class="skill2"> 3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> 3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Open Lock§</td>
+                                <td width="27" valign="top" class="skillability">dex</td>
+                                <td width="27" valign="top" class="skill2"> 3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> 3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Perform¤§</td>
+                                <td width="27" valign="top" class="skillability">cha</td>
+                                <td width="27" valign="top" class="skill2"> -4</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -4</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Profession§</td>
+                                <td width="27" valign="top" class="skillability">wis</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">Ride¤§</td>
+                                <td width="27" valign="top" class="skillability">dex</td>
+                                <td width="27" valign="top" class="skill2"> 3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> 3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Search¤§</td>
+                                <td width="27" valign="top" class="skillability">int</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Sense Motive¤§</td>
+                                <td width="27" valign="top" class="skillability">wis</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Sleight of Hand§</td>
+                                <td width="27" valign="top" class="skillability">dex</td>
+                                <td width="27" valign="top" class="skill2"> 3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> 3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Speak Language§</td>
+                                <td width="27" valign="top" class="skillability">int</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Spellcraft§</td>
+                                <td width="27" valign="top" class="skillability">int</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Spot¤§</td>
+                                <td width="27" valign="top" class="skillability">wis</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">Survival¤§</td>
+                                <td width="27" valign="top" class="skillability">wis</td>
+                                <td width="27" valign="top" class="skill2"> -3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">Swim¤§</td>
+                                <td width="27" valign="top" class="skillability">str</td>
+                                <td width="27" valign="top" class="skill2"> 18</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> 11</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 7</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Tumble</td>
+                                <td width="27" valign="top" class="skillability">dex</td>
+                                <td width="27" valign="top" class="skill2"> 5</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> 3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 2</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Use Magic Device§</td>
+                                <td width="27" valign="top" class="skillability">cha</td>
+                                <td width="27" valign="top" class="skill2"> -4</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> -4</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">(cc)Use Rope¤§</td>
+                                <td width="27" valign="top" class="skillability">dex</td>
+                                <td width="27" valign="top" class="skill2"> 3</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill"> 3</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill"> 0</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill"> 0</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">&nbsp;</td>
+                                <td width="27" valign="top" class="skillability">&nbsp;</td>
+                                <td width="27" valign="top" class="skill2">&nbsp;</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">&nbsp;</td>
+                                <td width="27" valign="top" class="skillability">&nbsp;</td>
+                                <td width="27" valign="top" class="skill2">&nbsp;</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">&nbsp;</td>
+                                <td width="27" valign="top" class="skillability">&nbsp;</td>
+                                <td width="27" valign="top" class="skill2">&nbsp;</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="3" height="18" valign="top"><!--DWLayoutEmptyCell-->&nbsp;</td>
+                                <td width="59" valign="top" class="skillname">&nbsp;</td>
+                                <td width="27" valign="top" class="skillability">&nbsp;</td>
+                                <td width="27" valign="top" class="skill2">&nbsp;</td>
+                                <td width="12" class="desc3">=</td>
+                                <td width="27" valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td valign="top" class="skill">&nbsp;</td>
+                                <td width="8" class="desc3">+</td>
+                                <td width="29" valign="top" class="skill">&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="114" valign="top">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tbody>
+                <tr>
+                    <td width="57" rowspan="2" valign="top" class="boxed">1-692lb.</td>
+                    <td width="57" rowspan="2" valign="top" class="boxed">693-1384lb.</td>
+                    <td width="57" rowspan="2" valign="top" class="boxed">1385-2080lb.</td>
+                    <td width="57" rowspan="2" valign="top" class="boxed">2080lb.</td>
+                    <td width="57" rowspan="2" valign="top" class="boxed">4160lb.</td>
+                    <td width="57" rowspan="2" valign="top" class="boxed">10400lb.</td>
+                    <td width="12" height="24">&nbsp;</td>
+                    <td width="64" valign="top" class="blackback3">PLATINUM</td>
+                    <td width="162" valign="top" class="boxed">128</td>
+                </tr>
+                <tr>
+                    <td height="24">&nbsp;</td>
+                    <td valign="top" class="blackback3">GOLD</td>
+                    <td valign="top" class="boxed">3</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" valign="top" class="blackback3">LIGHT<br>
+                        LOAD
+                    </td>
+                    <td rowspan="2" valign="top" class="blackback3">MEDIUM<br>
+                        LOAD
+                    </td>
+                    <td rowspan="2" valign="top" class="blackback3">HEAVY<br>
+                        LOAD
+                    </td>
+                    <td rowspan="2" valign="top" class="blackback3"><p>LIFT OVER HEAD<br>
+                            <span class="blackback_small">EQUALS MAX LOAD</span></p></td>
+                    <td rowspan="2" valign="top" class="blackback3"><p>LIFT OFF GROUND<br>
+                            <span class="blackback_small">2x MAX LOAD</span></p></td>
+                    <td rowspan="2" valign="top" class="blackback3"><p>PUSH OR DRAG<br>
+                            <span class="blackback_small">5x MAX LOAD</span></p></td>
+                    <td height="24"></td>
+                    <td valign="top" class="blackback3">SILVER</td>
+                    <td valign="top" class="boxed">5</td>
+                </tr>
+                <tr>
+                    <td height="24"></td>
+                    <td valign="top" class="blackback3">COPPER</td>
+                    <td valign="top" class="boxed">0</td>
+                </tr>
+                <tr>
+                    <td height="18"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="250" valign="top">
+            <table width="580" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tbody>
+                <tr>
+                    <td height="18" colspan="4" valign="top" class="blackback">FEATS, LANGUAGES
+                        &amp; ABILITIES
+                    </td>
+                </tr>
+                <tr>
+                    <td width="145" height="18" valign="top" class="boxedsmall">&nbsp;</td>
+                    <td width="145" valign="top" class="boxedsmall">&nbsp;</td>
+                    <td width="145" valign="top" class="boxedsmall">Fast movement</td>
+                    <td width="145" valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall"><span class="feattitle">Feats</span></td>
+                    <td valign="top" class="boxedsmall"><span class="feattitle">Languages</span></td>
+                    <td valign="top" class="boxedsmall">Illiteracy</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Two-Weapon Fighting</td>
+                    <td valign="top" class="boxedsmall">Common</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Run</td>
+                    <td valign="top" class="boxedsmall">Orc</td>
+                    <td valign="top" class="boxedsmall"><span class="feattitle">Half-Orc abilities</span></td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Power Attack</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">Darkvision (60 feet)</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Improved Two-Weapon Fighting</td>
+                    <td valign="top" class="boxedsmall"><span class="feattitle">Barbarian abilities</span></td>
+                    <td valign="top" class="boxedsmall">Orc Blood</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Improved Initiative</td>
+                    <td valign="top" class="boxedsmall">Rage 4/day</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Armor Proficiency (light)</td>
+                    <td valign="top" class="boxedsmall">Trap Sense +4</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Armor Proficiency (medium)</td>
+                    <td valign="top" class="boxedsmall">Greater Rage</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Martial Weapon Proficiency</td>
+                    <td valign="top" class="boxedsmall">Damage reduction 2/--</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Shield Proficiency</td>
+                    <td valign="top" class="boxedsmall">Improved Uncanny dodge</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="18" valign="top" class="boxedsmall">Simple Weapon Proficiency</td>
+                    <td valign="top" class="boxedsmall">Uncanny dodge</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                    <td valign="top" class="boxedsmall">&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="page">
+    <!--DWLayoutTable-->
+    <tbody>
+    <tr>
+        <td>
+            <strong>Appearance, Traits + Disadvantages</strong>
+            <p>Bardzo ladny ork! I mondry.</p>
+            <p>
+                <strong>History</strong></p>
+            <p>Urodzil sie. Wali z topora.</p>
+            <p>
+                <strong>Goals</strong></p>
+            <p>Jesc. Gwalcic. Palic. Zabijac. Spac.</p>
+            <p>
+            </p></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

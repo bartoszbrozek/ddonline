@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block pageTitle %}
     Your characters
+{% endblock %}
 
+{% block body %}
     {% include 'datatables/characters.html.twig' %}
-
 {% endblock %}
 

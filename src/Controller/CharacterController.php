@@ -24,7 +24,9 @@ class CharacterController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $user = $this->getDoctrine()->getRepository(User::class)->getSingleUserById($userInterface->getId());
+            $user = $this->getDoctrine()->getRepository(User::class)
+                ->getSingleUserById($userInterface->getId());
+
             $gameCharacter->setUser($user);
 
             $em = $this->getDoctrine()->getManager();
@@ -42,10 +44,23 @@ class CharacterController extends Controller
 
     public function listAction(Request $request, UserInterface $userInterface)
     {
-        $characters = $this->getDoctrine()->getRepository(GameCharacter::class)->getUserGameCharactersById($userInterface->getId());
+        $characters = $this->getDoctrine()->getRepository(GameCharacter::class)
+            ->getUserGameCharactersById($userInterface->getId());
 
         return $this->render('character/list.html.twig', [
             'characters' => $characters
+        ]);
+    }
+
+    public function showAction(Request $request, UserInterface $userInterface, $id)
+    {
+        $character = $this->getDoctrine()->getRepository(GameCharacter::class)
+            ->getSingleGameCharacter($userInterface->getId(), $id);
+
+//        dump($character);
+
+        return $this->render('character/show.html.twig', [
+            'character' => $character
         ]);
     }
 
