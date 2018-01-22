@@ -102,6 +102,20 @@ class GameCharacter
      */
     private $hitPoints;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $roleplayBasic;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $roleplayHistory;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $roleplayGoals;
 
     /**
      * Many GameCharacters have Many Speeches.
@@ -111,14 +125,39 @@ class GameCharacter
      *      inverseJoinColumns={@ORM\JoinColumn(name="speech_id", referencedColumnName="id")}
      *      )
      */
-
     private $speeches;
 
+    /**
+     * @ORM\OneToMany(targetEntity="GameCharacterSkillAssociation", mappedBy="gameCharacter")
+     */
+    private $gameCharacterSkillAssociations;
 
     public function __construct()
     {
         $this->speeches = new ArrayCollection();
+        $this->gameCharacterSkillAssociations = new ArrayCollection();
     }
+
+    public function addGameCharacterSkillAssociation(GameCharacterSkillAssociation $gameCharacterSkillAssociation)
+    {
+        $this->gameCharacterSkillAssociations = $gameCharacterSkillAssociation;
+
+        return $this;
+    }
+
+    public function removeGameCharacterSkillAssociation(GameCharacterSkillAssociation $gameCharacterSkillAssociation)
+    {
+        $this->gameCharacterSkillAssociations->removeElement($gameCharacterSkillAssociation);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGameCharacterSkillAssociations()
+    {
+        return $this->gameCharacterSkillAssociations;
+    }
+
 
     /**
      * @return mixed
@@ -384,6 +423,53 @@ class GameCharacter
         $this->hitPoints = $hitPoints;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getRoleplayBasic()
+    {
+        return $this->roleplayBasic;
+    }
+
+    /**
+     * @param mixed $roleplayBasic
+     */
+    public function setRoleplayBasic($roleplayBasic)
+    {
+        $this->roleplayBasic = $roleplayBasic;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRoleplayHistory()
+    {
+        return $this->roleplayHistory;
+    }
+
+    /**
+     * @param mixed $roleplayHistory
+     */
+    public function setRoleplayHistory($roleplayHistory)
+    {
+        $this->roleplayHistory = $roleplayHistory;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRoleplayGoals()
+    {
+        return $this->roleplayGoals;
+    }
+
+    /**
+     * @param mixed $roleplayGoals
+     */
+    public function setRoleplayGoals($roleplayGoals)
+    {
+        $this->roleplayGoals = $roleplayGoals;
+    }
 
 
 }

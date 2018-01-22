@@ -13,13 +13,13 @@
         <li><a data-toggle="tab" href="#skills">Skills</a></li>
         <li><a data-toggle="tab" href="#feats">Feats</a></li>
         <li><a data-toggle="tab" href="#speech">Speech</a></li>
-        <li><a data-toggle="tab" href="#menu2">Shop</a></li>
-        <li><a data-toggle="tab" href="#menu2">Equip</a></li>
-        <li><a data-toggle="tab" href="#menu2">Magic</a></li>
-        <li><a data-toggle="tab" href="#menu2">Spells</a></li>
-        <li><a data-toggle="tab" href="#menu2">Character Info</a></li>
-        <li><a data-toggle="tab" href="#menu2">History</a></li>
-        <li><a data-toggle="tab" href="#menu2">Goals</a></li>
+        <li><a data-toggle="tab" href="#shop">Shop</a></li>
+        <li><a data-toggle="tab" href="#equip">Equip</a></li>
+        <li><a data-toggle="tab" href="#magic">Magic</a></li>
+        <li><a data-toggle="tab" href="#spells">Spells</a></li>
+        <li><a data-toggle="tab" href="#roleplayBasic">Character Info</a></li>
+        <li><a data-toggle="tab" href="#history">History</a></li>
+        <li><a data-toggle="tab" href="#goals">Goals</a></li>
     </ul>
 
     <div class="tab-content">
@@ -49,6 +49,23 @@
         </div>
         <div id="speech" class="tab-pane fade">
             {{ form_row(form.speeches) }}
+        </div>
+        <div id="shop" class="tab-pane fade">
+        </div>
+        <div id="equip" class="tab-pane fade">
+        </div>
+        <div id="magic" class="tab-pane fade">
+        </div>
+        <div id="spells" class="tab-pane fade">
+        </div>
+        <div id="roleplayBasic" class="tab-pane fade">
+            {{ form_row(form.roleplayBasic) }}
+        </div>
+        <div id="history" class="tab-pane fade">
+            {{ form_row(form.roleplayHistory) }}
+        </div>
+        <div id="goals" class="tab-pane fade">
+            {{ form_row(form.roleplayGoals) }}
         </div>
     </div>
 

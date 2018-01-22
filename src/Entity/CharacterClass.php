@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -20,6 +21,31 @@ class CharacterClass
      * @ORM\Column(type="string", length=127)
      */
     private $className;
+
+
+    /**
+     * Many CharacterClasses have Many Skills.
+     * @ORM\ManyToMany(targetEntity="Skill")
+     * @ORM\JoinTable(name="characterClasses_skills",
+     *      joinColumns={@ORM\JoinColumn(name="character_class_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="skill_id", referencedColumnName="id")}
+     *      )
+     */
+
+    private $skills;
+
+    public function __construct()
+    {
+        $this->skills = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSkills()
+    {
+        return $this->skills;
+    }
 
     /**
      * @return mixed

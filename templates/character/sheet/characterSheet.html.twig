@@ -50,8 +50,8 @@
     <tr>
         <td height="39" valign="middle" class="blackback"><p>STR<br>
                 <span class="blackback_small">strength</span></p></td>
-        <td colspan="2" valign="middle" class="boxed">32</td>
-        <td colspan="3" valign="middle" class="boxed">+11</td>
+        <td colspan="2" valign="middle" class="boxed">{{ character.strength }}</td>
+        <td colspan="3" valign="middle" class="boxed">{{ ((character.strength - 10) / 2)|round(0, "floor") }}</td>
         <td colspan="2" valign="top" class="blackback"><p>HP<br>
                 <span class="blackback_small">hit points</span></p></td>
         <td colspan="3" valign="top" class="boxed">90</td>
@@ -62,8 +62,8 @@
     <tr>
         <td height="39" valign="middle" class="blackback"><p>DEX<br>
                 <span class="blackback_small">dexterity</span></p></td>
-        <td colspan="2" valign="middle" class="boxed">16</td>
-        <td colspan="3" valign="middle" class="boxed">+3</td>
+        <td colspan="2" valign="middle" class="boxed">{{ character.dexterity }}</td>
+        <td colspan="3" valign="middle" class="boxed">{{ ((character.dexterity - 10) / 2)|round(0, "floor") }}</td>
         <td colspan="2" valign="top" class="blackback"><p>AC<br>
                 <span class="blackback_small">armor class</span></p></td>
         <td colspan="3" valign="top" class="boxed">13</td>
@@ -87,8 +87,8 @@
     <tr>
         <td rowspan="2" valign="middle" class="blackback"><p>CON<br>
                 <span class="blackback_small">constitution</span></p></td>
-        <td colspan="2" rowspan="2" valign="middle" class="boxed">12</td>
-        <td colspan="3" rowspan="2" valign="middle" class="boxed">+1</td>
+        <td colspan="2" rowspan="2" valign="middle" class="boxed">{{ character.constitution }}</td>
+        <td colspan="3" rowspan="2" valign="middle" class="boxed">{{ ((character.constitution - 10) / 2)|round(0, "floor") }}</td>
         <td width="31" height="18"></td>
         <td width="8"></td>
         <td colspan="3" rowspan="2" valign="top" class="desc4">TOTAL</td>
@@ -122,8 +122,8 @@
     <tr>
         <td height="42" valign="middle" class="blackback"><p>INT<br>
                 <span class="blackback_small">intelligence</span></p></td>
-        <td colspan="2" valign="middle" class="boxed">4</td>
-        <td colspan="3" valign="middle" class="boxed">-3</td>
+        <td colspan="2" valign="middle" class="boxed">{{ character.intelligence }}</td>
+        <td colspan="3" valign="middle" class="boxed">{{ ((character.intelligence - 10) / 2)|round(0, "floor") }}</td>
         <td colspan="3" valign="top" class="blackback"><p>TOUCH<br>
                 <span class="blackback_small">armor class</span></p></td>
         <td colspan="3" valign="top" class="boxed">13</td>
@@ -490,8 +490,8 @@
     <tr>
         <td height="42" valign="middle" class="blackback"><p>WIS<br>
                 <span class="blackback_small">wisdom</span></p></td>
-        <td colspan="2" valign="middle" class="boxed">5</td>
-        <td colspan="3" valign="middle" class="boxed">-3</td>
+        <td colspan="2" valign="middle" class="boxed">{{ character.wisdom }}</td>
+        <td colspan="3" valign="middle" class="boxed">{{ ((character.wisdom - 10) / 2)|round(0, "floor") }}</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td width="10">&nbsp;</td>
@@ -508,8 +508,8 @@
     <tr>
         <td height="42" valign="middle" class="blackback"><p>CHA<br>
                 <span class="blackback_small">charisma</span></p></td>
-        <td colspan="2" valign="middle" class="boxed">2</td>
-        <td colspan="3" valign="middle" class="boxed">-4</td>
+        <td colspan="2" valign="middle" class="boxed">{{ character.charisma }}</td>
+        <td colspan="3" valign="middle" class="boxed">{{ ((character.charisma - 10) / 2)|round(0, "floor") }}</td>
         <td colspan="6" valign="top" class="blackback"><p>INITIATIVE<br>
                 <span class="blackback_small">modifier</span></p></td>
         <td colspan="2" valign="top" class="boxed">+7</td>
@@ -1266,87 +1266,15 @@
     </tr>
     <tr>
         <td height="250" valign="top">
-            <table width="580" border="0" cellpadding="0" cellspacing="0">
-                <!--DWLayoutTable-->
-                <tbody>
-                <tr>
-                    <td height="18" colspan="4" valign="top" class="blackback">FEATS, LANGUAGES
-                        &amp; ABILITIES
-                    </td>
-                </tr>
-                <tr>
-                    <td width="145" height="18" valign="top" class="boxedsmall">&nbsp;</td>
-                    <td width="145" valign="top" class="boxedsmall">&nbsp;</td>
-                    <td width="145" valign="top" class="boxedsmall">Fast movement</td>
-                    <td width="145" valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall"><span class="feattitle">Feats</span></td>
-                    <td valign="top" class="boxedsmall"><span class="feattitle">Languages</span></td>
-                    <td valign="top" class="boxedsmall">Illiteracy</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Two-Weapon Fighting</td>
-                    <td valign="top" class="boxedsmall">Common</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Run</td>
-                    <td valign="top" class="boxedsmall">Orc</td>
-                    <td valign="top" class="boxedsmall"><span class="feattitle">Half-Orc abilities</span></td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Power Attack</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">Darkvision (60 feet)</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Improved Two-Weapon Fighting</td>
-                    <td valign="top" class="boxedsmall"><span class="feattitle">Barbarian abilities</span></td>
-                    <td valign="top" class="boxedsmall">Orc Blood</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Improved Initiative</td>
-                    <td valign="top" class="boxedsmall">Rage 4/day</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Armor Proficiency (light)</td>
-                    <td valign="top" class="boxedsmall">Trap Sense +4</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Armor Proficiency (medium)</td>
-                    <td valign="top" class="boxedsmall">Greater Rage</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Martial Weapon Proficiency</td>
-                    <td valign="top" class="boxedsmall">Damage reduction 2/--</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Shield Proficiency</td>
-                    <td valign="top" class="boxedsmall">Improved Uncanny dodge</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="18" valign="top" class="boxedsmall">Simple Weapon Proficiency</td>
-                    <td valign="top" class="boxedsmall">Uncanny dodge</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                    <td valign="top" class="boxedsmall">&nbsp;</td>
-                </tr>
-                </tbody>
+            <table border="0" cellpadding="0" cellspacing="0" class="page">
+                <div>
+                    <strong>Languages</strong>
+                    <ul>
+                        {% for speech in character.speeches %}
+                            <li>{{ speech }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </table>
         </td>
     </tr>
@@ -1358,13 +1286,13 @@
     <tr>
         <td>
             <strong>Appearance, Traits + Disadvantages</strong>
-            <p>Bardzo ladny ork! I mondry.</p>
+            <p>{{ character.roleplayBasic }}</p>
             <p>
                 <strong>History</strong></p>
-            <p>Urodzil sie. Wali z topora.</p>
+            <p>{{ character.roleplayHistory }}</p>
             <p>
                 <strong>Goals</strong></p>
-            <p>Jesc. Gwalcic. Palic. Zabijac. Spac.</p>
+            <p>{{ character.roleplayGoals }}</p>
             <p>
             </p></td>
     </tr>

@@ -57,7 +57,7 @@ class CharacterController extends Controller
         $character = $this->getDoctrine()->getRepository(GameCharacter::class)
             ->getSingleGameCharacter($userInterface->getId(), $id);
 
-//        dump($character);
+        dump($character);
 
         return $this->render('character/show.html.twig', [
             'character' => $character
